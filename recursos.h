@@ -57,7 +57,7 @@ void recebeJogadores(int x)
 
     system("clear");
 
-    delay(1); //Delay para "ambientar" programa simulando jogos antigos
+    delay(1); //Delay para "ambientar" programa simulando jogos antigos!!
 
 
 }
