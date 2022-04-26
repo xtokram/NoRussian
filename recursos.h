@@ -33,7 +33,7 @@ void recebeJogadores(int x)
         getchar();
         system("clear");
 
-        delay(1);
+        delay(1); //Delay para "ambientar" programa simulando jogos antigos
 
     }
 }
@@ -71,7 +71,7 @@ imprimeJogadores(int x)
 
     }
 
-    delay(3000);
+    delay(3);
 
 }
 
@@ -112,7 +112,7 @@ void ShowMenu()  // funçao que imprime o menu com o banner
 
 void delay(int number_of_seconds)    //Cria função de delay com parametro inteiro em segundos
 {
-    int milli_seconds = 1000 * number_of_seconds; // Cria variavel millisegundos que recebe 1000 * segundos
+    int milli_seconds = 1000000 * number_of_seconds; // Cria variavel millisegundos que recebe 1000 * segundos
     clock_t start_time = clock(); // Cria variavel tempo_de_começo que recebe o retorno da funçao clock da biblioteca time.h
     while (clock() < start_time + milli_seconds); //Looping que espera do começo até o tempo estipulado
 }
