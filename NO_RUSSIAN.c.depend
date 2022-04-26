@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1650950611 source:/home/tokram/Documents/Uniamerica/C/NoRussian/NO_RUSSIAN.c/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"RESOURCES_GAME.h"
+	<string.h>
+
+1650952616 /home/tokram/Documents/Uniamerica/C/NoRussian/NO_RUSSIAN.c/RESOURCES_GAME.h
+
+1650989818 source:/home/tokram/Documents/Uniamerica/C/NoRussian/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"recursos.h"
+	<string.h>
+
+1650991328 /home/tokram/Documents/Uniamerica/C/NoRussian/recursos.h
+
