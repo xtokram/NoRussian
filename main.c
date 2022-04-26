@@ -12,7 +12,6 @@ int main()
 
     jogador player;
     int opcao;
-    int numeroJogadores = 3;  //NUMERO MENOR QUE 10!!!
 
     while(opcao != 5){
 

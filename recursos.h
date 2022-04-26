@@ -11,6 +11,7 @@ typedef struct
 } jogador;
 
 jogador jogadores[10];
+int numeroJogadores = 0;  //NUMERO MENOR QUE 10!!!
 
 void iniciarJogo()
 {
@@ -21,21 +22,44 @@ void iniciarJogo()
 
 void recebeJogadores(int x)
 {
+    char nome[20];
+    int pontos;
+    int encontrado = -1;
+
+    //for(int i = 0; i < x; i++)
+
+
+    printf("Digite o nome do jogador: \n");
+    scanf("%s",nome);
+    getchar();
+
+    printf("Digite a pontuação do jogador: \n");
+    scanf("%d",&pontos);
+    getchar();
+
     for(int i = 0; i < x; i++)
     {
-
-        printf("Digite o nome %dº do jogador: \n",i+1);
-        scanf("%s", jogadores[i].nome);
-        getchar();
-
-        printf("Digite a pontuação do jogador: \n");
-        scanf("%d", &jogadores[i].pontuacao);
-        getchar();
-        system("clear");
-
-        delay(1); //Delay para "ambientar" programa simulando jogos antigos
+        if (strcmp(nome, jogadores[i].nome) == 0)
+        {
+            encontrado = i;
+            break;
+        }
 
     }
+    if(encontrado == -1){
+        encontrado = numeroJogadores;
+        strcpy(jogadores[encontrado].nome, nome);
+        numeroJogadores++;
+
+    }
+
+    jogadores[encontrado].pontuacao = pontos;
+
+    system("clear");
+
+    delay(1); //Delay para "ambientar" programa simulando jogos antigos
+
+
 }
 
 void ordenaJogadores(int x)
@@ -61,7 +85,7 @@ void ordenaJogadores(int x)
 
 imprimeJogadores(int x)
 {
-    printf("\n\t      ----- [+] RANKING NO RUSSIAN BRASIL [+] -----\n\n");
+    printf("\n\t        ----- [+] RANKING NO RUSSIAN BRASIL [+] -----\n\n");
     printf("\t\t[RANKING] \t [PLAYER] \t\t [PONTUAÇÃO] \n");
     for(int i = 0; i < x; i++)
     {
