@@ -29,7 +29,6 @@ int main()
 
             case 2:
             recebeJogadores(numeroJogadores);
-            //ordenaJogadores(numeroJogadores);
             break;
 
             case 3:

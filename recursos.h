@@ -4,11 +4,12 @@
 typedef struct
 {
 
-    char nome[15];
+    char nome[20];
     int pontuacao;
 
 
 } jogador;
+
 
 jogador jogadores[10];
 int numeroJogadores = 0;  //NUMERO MENOR QUE 10!!!
@@ -24,10 +25,7 @@ void recebeJogadores(int x)
 {
     char nome[20];
     int pontos;
-    int encontrado = -1;
-
-    //for(int i = 0; i < x; i++)
-
+    int encontrado = -1; //Qualquer posição de indice de array inválida!
 
     printf("Digite o nome do jogador: \n");
     scanf("%s",nome);
@@ -39,13 +37,13 @@ void recebeJogadores(int x)
 
     for(int i = 0; i < x; i++)
     {
-        if (strcmp(nome, jogadores[i].nome) == 0)
+        if(strcmp(nome, jogadores[i].nome) == 0)//VERIFICA SE STRING DIGITADA JA EXISTE NO ARRAY
         {
             encontrado = i;
             break;
         }
-
     }
+
     if(encontrado == -1){
         encontrado = numeroJogadores;
         strcpy(jogadores[encontrado].nome, nome);
@@ -66,7 +64,7 @@ void ordenaJogadores(int x)
 {
     int i,j;
     jogador aux;
-    for(i=0; i < x -1; i++)
+    for(i=0; i < x -1; i++) // Bubblesort
     {
         for(j = 0; j < x -1; j++)
         {
